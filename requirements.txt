@@ -1,0 +1,3 @@
+sweetviz
+setuptools
+pandas
