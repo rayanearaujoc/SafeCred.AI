@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Modelos</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Comparação de Modelos de Classificação</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1 Score</th>
+                <th>ROC AUC</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in resultados %}
+            <tr>
+                <td>{{ r['Modelo'] }}</td>
+                <td>{{ r['Accuracy'] }}</td>
+                <td>{{ r['Precision'] }}</td>
+                <td>{{ r['Recall'] }}</td>
+                <td>{{ r['F1 Score'] }}</td>
+                <td>{{ r['ROC AUC'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
